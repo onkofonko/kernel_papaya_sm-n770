@@ -10,6 +10,7 @@ obj-$(CONFIG_BLK_DEV_INITRD)   += initramfs.o
 obj-$(CONFIG_GENERIC_CALIBRATE_DELAY) += calibrate.o
 
 obj-$(CONFIG_UH)              += _uh.o uh.o ld.o uh_fault_handler.o
+AFLAGS__uh.o := -I$(srctree)
 obj-$(CONFIG_RKP_CFP)         += rkp_cfp.o
 ifneq ($(CONFIG_ARCH_INIT_TASK),y)
 obj-y                          += init_task.o
