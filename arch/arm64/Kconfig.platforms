@@ -275,6 +275,15 @@ config SOC_EXYNOS9810
 	select PINCTRL
 	select SAMSUNG_DMADEV
 
+choice
+	prompt "Exynos 9810 device target"
+	default EXYNOS9810_N770F
+
+config EXYNOS9810_N770F
+	bool "Samsung Galaxy Note 10 Lite"
+	
+endchoice
+
 config SOC_EXYNOS9810_EVT0
 	bool "Samsung EXYNOS9810_EVT0"
 	depends on SOC_EXYNOS9810
